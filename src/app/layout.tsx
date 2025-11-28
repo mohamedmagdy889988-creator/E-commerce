@@ -1,6 +1,13 @@
-import type { Metadata } from "next";
+import Footer from "@/_components/footer/footer";
+import MySessionProvider from "@/_components/MySessionProvider/MySessionProvider";
+import Navbar from "@/_components/navbar/navbar";
+import { Toaster } from "@/components/ui/sonner";
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { CartCountProvider } from "@/context/cart.context";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,9 +32,24 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}       >
+
+        <MySessionProvider>
+          <CartCountProvider>
+
+            <Navbar />
+            <div>
+
+            </div>
+            <main className="flex-grow container px-8 pt-[70px] min-h-[100vh]">
+              {children}
+            </main>
+            <Toaster />
+
+            <Footer />.
+          </CartCountProvider>
+
+        </MySessionProvider>
       </body>
     </html>
   );

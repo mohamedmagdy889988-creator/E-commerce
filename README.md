@@ -1,36 +1,171 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# E-Commerce Web Application
 
-## Getting Started
+A modern e-commerce platform built with Next.js, React, and TypeScript.
 
-First, run the development server:
+**Last Updated:** November 28, 2025
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 📋 Overview
+
+This is a full-featured e-commerce web application that allows users to:
+- Browse and search products
+- View detailed product information
+- Add items to cart and wishlist
+- Place and track orders
+- Manage user authentication and profiles
+- Process payments
+
+## 🛠️ Tech Stack
+
+- **Framework:** Next.js 14+ (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Authentication:** NextAuth.js
+- **Components:** React with Shadcn/UI
+- **State Management:** React Context API
+- **HTTP Client:** Fetch API
+- **Icons:** Font Awesome
+
+## 📁 Project Structure
+
+```
+src/
+├── _components/       # Reusable UI components
+│   ├── AddProductBtn/
+│   ├── CategoriesSlider/
+│   ├── footer/
+│   ├── HomeSlider/
+│   ├── navbar/
+│   ├── ProductCard/
+│   └── Searchbar/
+├── _service/          # API services
+│   ├── cart.service.ts
+│   ├── Categories.Service.ts
+│   ├── Orders.Service.ts
+│   └── Products.Service.ts
+├── app/               # Next.js pages and routes
+│   ├── (Auth)/        # Authentication pages
+│   ├── (pages)/       # Public pages (about, contact)
+│   ├── allorders/     # Orders listing
+│   ├── api/           # API routes
+│   ├── cart/          # Cart page
+│   ├── productDetails/ # Product detail pages
+│   ├── wishlist/      # Wishlist page
+│   └── layout.tsx     # Root layout
+├── components/        # UI component library (Shadcn)
+├── context/           # React context (cart, wishlist)
+├── lib/              # Utility functions
+├── next-auth/        # NextAuth configuration
+└── types/            # TypeScript type definitions
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Prerequisites
+- Node.js 16+ (recommended 18+)
+- npm, yarn, pnpm, or bun package manager
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Installation
 
-## Learn More
+1. Clone the repository
+```bash
+git clone <repository-url>
+cd new-web
+```
 
-To learn more about Next.js, take a look at the following resources:
+2. Install dependencies
+```bash
+npm install
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Set up environment variables (if needed)
+```bash
+cp .env.example .env.local
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4. Run the development server
+```bash
+npm run dev
+```
 
-## Deploy on Vercel
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📦 Available Scripts
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+
+## 🔌 API Integration
+
+The app integrates with the e-commerce API:
+- **Base URL:** https://ecommerce.routemisr.com/api/v1
+- **Endpoints:**
+  - Products: `/products`
+  - Categories: `/categories`
+  - Orders: `/orders/user/{userId}`
+  - Authentication: `/auth/signin`, `/auth/signup`
+
+## 🔐 Authentication
+
+- Uses NextAuth.js with credentials provider
+- JWT-based token handling
+- User session management
+- Protected routes
+
+## 💳 Features
+
+### Product Management
+- Browse all products with pagination
+- Search and filter products by category
+- View detailed product information with images
+- Add to cart or wishlist
+
+### Cart & Orders
+- Persistent shopping cart
+- Order placement with payment options
+- View order history
+- Track order status
+
+### User Management
+- User registration and login
+- Profile management
+- Order tracking
+- Wishlist management
+
+## 🎨 UI Components
+
+The project uses Shadcn/UI components for consistent and accessible UI:
+- Button, Input, Label, Form
+- Table for displaying data
+- Sonner for toast notifications
+
+## 🚦 Status
+
+✅ In Development
+
+### Recent Updates
+- Enhanced order cards with full details (items, shipping, payment)
+- API integration for fetching user orders
+- Product details page with image gallery
+- Cart and wishlist functionality
+
+## 📝 Notes
+
+- The app fetches real data from the e-commerce API
+- Images are loaded from external URLs
+- Some features may require authentication
+- Payment methods are simulated (cash on delivery)
+
+## 🤝 Contributing
+
+Feel free to submit issues and enhancement requests!
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+**Created:** November 2025  
+**Last Updated:** November 28, 2025
