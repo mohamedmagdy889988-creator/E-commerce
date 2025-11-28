@@ -5,7 +5,7 @@ import img1 from '@images/labtop.jpg'
 import img2 from '@images/phone2.png'
 import img3 from '@images/phone.webp'
 import blog1 from '@images/camera.jpg'
-import blog2 from '@images/Mobile__1.webp'
+import blog2 from '@images/Mobile.webp'
 
 
 export default function HomeSlider() {
