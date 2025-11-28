@@ -1,10 +1,10 @@
 import React from 'react'
 import MySwiper from '../MySwiper/MySwiper'
 import Image from 'next/image'
-import img1 from '@images/istockphoto-178716575-612x612.jpg'
-import img2 from '@images/hero_endframe__cvklg0xk3w6e_large 2.png'
-import img3 from '@images/23-12-29_19-47-23-850x478-1-780x470.webp'
-import blog1 from '@images/41VnHdPlzZL._SR290,290_.jpg'
+import img1 from '@images/labtop.jpg'
+import img2 from '@images/phone2.png'
+import img3 from '@images/phone.webp'
+import blog1 from '@images/camera.jpg'
 import blog2 from '@images/Mobile__1.webp'
 
 

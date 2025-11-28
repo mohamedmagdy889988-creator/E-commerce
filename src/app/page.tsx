@@ -1,8 +1,7 @@
-import React, { lazy, Suspense } from 'react'
+import HomeSlider from '@/_components/HomeSlider/HomeSlider';
 import ProductCard from '@/_components/ProductCard/ProductCard';
 import { getAllProducts } from '@/_service/Products.Service';
-import MySwiper from '@/_components/MySwiper/MySwiper';
-import HomeSlider from '@/_components/HomeSlider/HomeSlider';
+import { lazy, Suspense } from 'react';
 
 const CategoiesSlider = lazy(() =>import ('@/_components/CategoriesSlider/CategoriesSlider'))
 
