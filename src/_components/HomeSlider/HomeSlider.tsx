@@ -8,6 +8,7 @@ import blog1 from '@images/camera.jpg'
 import blog2 from '@images/Mobile.webp'
 
 
+
 export default function HomeSlider() {
     return (
         <div className=' pb-10 w-full flex'>
