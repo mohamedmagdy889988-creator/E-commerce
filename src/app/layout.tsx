@@ -46,7 +46,7 @@ export default function RootLayout({
             </main>
             <Toaster />
 
-            <Footer />.
+            <Footer />
           </CartCountProvider>
 
         </MySessionProvider>

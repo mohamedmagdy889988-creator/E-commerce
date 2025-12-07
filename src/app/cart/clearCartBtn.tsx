@@ -7,21 +7,21 @@ import { toast } from "sonner";
 import { clearCart } from "./cart.action";
 
 export default function ClearCartBtn() {
-    const { updateCartCount } = useContext(CartContext);
+    const { resetCartCount } = useContext(CartContext);
 
 
     async function handleClearCart() {
-        console.log("Button clicked ✅");
+        // console.log("Button clicked ");
 
         const output = await clearCart();
-        console.log("output from clearCart:", output);
+        // console.log("output from clearCart:", output);
 
 
         if (output === null) {
             toast.error("Failed to clear cart");
         } else {
             toast.success("All items removed from cart");
-            updateCartCount(0);
+            resetCartCount();
         }
     }
 
